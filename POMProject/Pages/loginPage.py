@@ -1,4 +1,4 @@
-from POMProjectDemo.Locators.locators import Locators
+from POMProject.Locators.locators import Locators
 
 class LoginPage():
 

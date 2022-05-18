@@ -4,11 +4,11 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import sys
-sys.path.append("C:/Users/Admin/Desktop/projectSelenium")
+sys.path.append("C:/Users/Admin/Desktop/project_testcase_POM")
 from selenium.webdriver.common.by import By
-from POMProjectDemo.Pages.loginPage import LoginPage
-from POMProjectDemo.Pages.homePage import HomePage
-from POMProjectDemo.Pages.admin import admin
+from POMProject.Pages.loginPage import LoginPage
+from POMProject.Pages.homePage import HomePage
+from POMProject.Pages.admin import admin
 import HtmlTestRunner
 
 import warnings
@@ -19,7 +19,7 @@ class LoginTestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path="C:\\Users\\Admin\\Desktop\\projectSelenium\\POMProjectDemo\\driver\\chromedriver.exe")
+        cls.driver = webdriver.Chrome(executable_path="C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\driver\\chromedriver.exe")
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
@@ -36,19 +36,19 @@ class LoginTestCase(unittest.TestCase):
         time.sleep(1)
         login.set_password("admin123")
         time.sleep(1)
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test1.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test1.png")
         login.click_login()
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test1_1.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test1_1.png")
 
 
         time.sleep(3)
 
         homepage = HomePage(driver)
         homepage.click_welcome()
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test1_3.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test1_3.png")
         time.sleep(1)
         homepage.click_logout()
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test1_4.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test1_4.png")
 
         time.sleep(3)
 
@@ -65,12 +65,12 @@ class LoginTestCase(unittest.TestCase):
         time.sleep(1)
         login.set_password("admin123")
         time.sleep(1)
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\ProjectSeleniumPOM\\POMProjectDemo\\img\\login\\test2.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test2.png")
         login.click_login()
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\ProjectSeleniumPOM\\POMProjectDemo\\img\\login\\test2_1.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test2_1.png")
 
         time.sleep(3)
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\ProjectSeleniumPOM\\POMProjectDemo\\img\\login\\test2_2.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test2_2.png")
         message = driver.find_element_by_xpath(By.XPATH,"").text
         self.assertEqual(message, "Invalid credentials123")
 
@@ -89,12 +89,12 @@ class LoginTestCase(unittest.TestCase):
         time.sleep(1)
         login.set_password("admin123123")
         time.sleep(1)
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test3.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test3.png")
         login.click_login()
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test3_1.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test3_1.png")
 
         time.sleep(3)
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test3_2.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test3_2.png")
         message = driver.find_element_by_xpath(By.XPATH,"").text
         self.assertEqual(message, "Invalid credentials")
 
@@ -113,12 +113,12 @@ class LoginTestCase(unittest.TestCase):
         time.sleep(1)
         login.set_password("admin123123")
         time.sleep(1)
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test4.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test4.png")
         login.click_login()
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test4_1.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test4_1.png")
 
         time.sleep(3)
-        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\projectSeleniumPOM\\POMProjectDemo\\img\\login\\test4_2.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test4_2.png")
         message = driver.find_element_by_xpath(By.XPATH,"").text
         self.assertEqual(message, "Invalid credentials")
 
@@ -137,12 +137,12 @@ class LoginTestCase(unittest.TestCase):
         time.sleep(1)
         login.set_password(" ")
         time.sleep(1)
-        driver.save_screenshot("C:\\Users\\Admin\Desktop\\projectSelenium\\POMProjectDemo\\img\\login\\test4.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test4.png")
         login.click_login()
-        driver.save_screenshot("C:\\Users\\Admin\Desktop\\projectSelenium\\POMProjectDemo\\img\\login\\test4_1.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test4_1.png")
 
         time.sleep(3)
-        driver.save_screenshot("C:\\Users\\Admin\Desktop\\projectSelenium\\POMProjectDemo\\img\\login\\test4_2.png")
+        driver.save_screenshot("C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\img\\login\\test4_2.png")
         message = driver.find_element_by_xpath(By.XPATH,"").text
         self.assertEqual(message, "Invalid credentials")
 
@@ -155,7 +155,7 @@ class LoginTestCase(unittest.TestCase):
         print("Test completed")
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:\\Users\\Admin\\Desktop\\projectSelenium\\POMProjectDemo\\report\\login"))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:\\Users\\Admin\\Desktop\\project_testcase_POM\\POMProject\\report\\login"))
 
 
 
